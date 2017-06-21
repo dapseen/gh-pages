@@ -112,13 +112,16 @@ body{
     max-width: 400px;
     width: 40%;
     height: 100vh;
-    background-color: #fff;
+    background-image:url(img/dapo.png);
+    background-size:contain;
+//background-color: #fff;
+
 
 }
 .main section{
-    padding: 50px;
+    padding: 20px;
     min-height: 80vh;
-    max-width: 500px;
+    max-width: 700px;
 }
 
 .portfolio.show{
@@ -209,10 +212,42 @@ body{
     -moz-transform: translateX(0px);
     transform: translateX(0px);
 }
+#typed{
+    font-size: 48px;
+    line-height: 1.4em;
+    text-align: left;
+    margin-top: 50px;
+    transition: transform 0.5s cubic-bezier(.69, 0, .31, 1);
+    -moz-transform-origin: 0 0;
+    font-weight: bold;
+//width: 100px;
+//overflow: hidden;
+}
 
 
-
-
+.typed-cursor{
+    font-size:50px;
+    color:rgba(0,0,0,0.8);
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
 
 
 /* ==========================================================================
@@ -295,8 +330,25 @@ body{
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 600px) {
+    .main-sidebar{
+        display:none;
+    }
+    .main:before{
+        content:'Ajuwon Adedapo';
+        text-align:center;
+        font-size:48px;
+
+    }
+
+    .main{
+        padding-top:50px;
+        margin:auto 20%;
+        text-align:left;
+    }
+    .main section{
+        padding:5px;
+    }
 }
 
 @media print,
